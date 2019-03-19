@@ -13,6 +13,46 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
+  
+  <build>
+    <sourceDirectory>src</sourceDirectory>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.7.0</version>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+        </configuration>
+      </plugin>
+      
+      <!-- mvn package 打包可执行Jar
+      <plugin>
+      	<artifactId>maven-assembly-plugin</artifactId>
+          	<configuration>
+                <appendAssemblyId>false</appendAssemblyId>
+                <descriptorRefs>
+                    <descriptorRef>jar-with-dependencies</descriptorRef>
+                </descriptorRefs>
+                <archive>
+                    <manifest>
+                        <mainClass>pdf2word.Main</mainClass>
+                    </manifest>
+                </archive>
+            </configuration>
+                <executions>
+                    <execution>
+                        <id>make-assembly</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>assembly</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            -->
+    </plugins>
+  </build>
 
   <dependencies>
     <dependency>
@@ -28,7 +68,7 @@
             <artifactId>pdfbox</artifactId>
             <version>2.0.12</version>
  	</dependency>
- 	<!-- Appache PDFBOX -->
+ 	<!-- end Appache PDFBOX -->
  	
  	<!-- Appache POI -->
  	<dependency>
@@ -48,7 +88,7 @@
 	    <artifactId>poi-ooxml</artifactId>
 	    <version>4.0.1</version>
 	</dependency>
-    <!-- Appache POI -->
+    <!-- end Appache POI -->
     
     <dependency>
 	    <groupId>org.apache.commons</groupId>
